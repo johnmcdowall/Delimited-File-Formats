@@ -1,0 +1,52 @@
+$column-count: 8;
+$column-width: 100px;
+$gutter-width: 20px;
+$container-width: 940px + $gutter-width;
+
+@mixin column($count: 1) {
+  width: ($column-width + $gutter-width) * $count - $gutter-width;
+  margin-left: $gutter-width;
+  display: block;
+  float: left;
+  @if $show-grid != false {
+    outline: 2px solid rgba(0, 0, 255, 0.5);
+  }
+}
+
+.one { @include column() }
+.two { @include column(2) }
+.three { @include column(3) }
+.four { @include column(4) }
+.five { @include column(5) }
+.six { @include column(6) }
+.seven { @include column(7) }
+.eight { @include column(8) }
+
+#container { 
+  width: $container-width;
+  padding-right: $gutter-width;
+
+  @if $center {
+    margin: 0px auto;
+  }
+  
+  @if $show_grid != false {
+    outline: 2px solid rgba(0, 0, 255, 0.2);
+
+    background-image: -webkit-gradient(linear, left center, right center,
+      from(rgba(0,0,0,0)),
+      color-stop(100% - ((($container-width / $column-count) - $gutter-width) / ($gutter-width + (($container-width / $column-count) - $gutter-width)) * 100%), rgba(0,0,0,0)),
+      color-stop(100% - ((($container-width / $column-count) - $gutter-width) / ($gutter-width + (($container-width / $column-count) - $gutter-width)) * 100%), rgba(255,0,0,0.2)),
+      to(rgba(255,0,0,0.2))
+    );
+    -webkit-background-size: $container-width / $column-count;
+
+    background-image: -moz-repeating-linear-gradient(center left,
+      transparent,
+      transparent (1 - ((($container-width / $column-count) - $gutter-width) / ($gutter-width + (($container-width / $column-count) - $gutter-width)))) * ($container-width / $column-count),
+      rgba(255,0,0,0.2) (1 - ((($container-width / $column-count) - $gutter-width) / ($gutter-width + (($container-width / $column-count) - $gutter-width)))) * ($container-width / $column-count),
+      rgba(255,0,0,0.2) $container-width / $column-count
+    );
+
+  }
+}

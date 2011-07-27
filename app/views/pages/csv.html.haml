@@ -1,0 +1,21 @@
+%h2 CSV
+/ You may frowm at my use of <b> or <i> tags, but frankly, I don't care.
+%p Generally, this guidance follows the <a href="http://tools.ietf.org/html/rfc4180">IETF RFC 1408</a> with a leaning towards interoperable best practices where the RFC was missing guidance.
+%ol
+  %li
+    %p CSV is a delimited data format that has fields/columns separated by the comma character and records/rows terminated by newlines. <u>Fields are separated by commas.</u> <i>(In locales where the comma is used as a decimal separator, the semicolon is used instead as a delimiter. The different delimiters cause problems when CSV files are exchanged, for example, between France and USA.)</i>
+  %li
+    %p The <b>first</b> record in a CSV file may contain column names for each of the fields.
+  %li
+    %p Fields with embedded commas must be enclosed within double-quote characters.
+  %li
+    %p Fields with embedded double-quote characters must be enclosed within double-quote characters, and each of the embedded double-quote characters must be represented by a pair of double-quote characters.
+  %li
+    %p Fields with embedded line breaks must be enclosed within double-quote characters.
+  %li
+    %p Fields with embedded commas must be enclosed within double-quote characters.
+  %li
+    %p Fields may always be enclosed within double-quote characters, whether necessary or not.
+  %li
+    %p Spaces are considered part of a field and should not be ignored.
+=link_to "Back", root_path

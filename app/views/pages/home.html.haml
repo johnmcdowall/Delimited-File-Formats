@@ -1,0 +1,13 @@
+%p Delimited File Formats store information as rows of values separated by a common delimiter, such as a comma, tab, pipe, semicolon or other such distinguishable character. The file format extension designates which delimiter character is used to separate the values. Each format may have additional features such as the ability to use the first row as Header values.
+
+%h2 PROBLEMS
+%p The two most common delimited file formats are CSV (Comma Separated Values), and TSV (Tab Separated Values). Unfortunately, both of the file formats in common use didn't get any official standardization behind them until they had been in use for many years. As such, it is common to find violations of the spirit behind each file format, e.g. using Tabs to separate values in a file designated as a .csv file format. This is problematic from many viewpoints.
+
+%h2 LEARN MORE
+%p Click the icons below to find out more about what makes a valid file in each format.
+
+%ul.formats
+  %li
+    =link_to image_tag('/assets/csv.png'), page_path(:id => "csv")
+  %li
+    =link_to image_tag('/assets/tsv.png'), page_path(:id => "tsv")
