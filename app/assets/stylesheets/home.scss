@@ -2,7 +2,6 @@ $show-grid: false;
 $center: true;
 
 @import "partials/reset";
-@import "partials/fontstack";
 @import "partials/grid";
 @import "partials/typography";
 
@@ -30,12 +29,13 @@ ul.formats {
 ol { width: 100%; }
 
 ol li {
+  font-family: Arial, Helvetica, sans-serif;
   list-style-type:decimal;
   list-style-position: outside;
   font-size:60pt;
   position: relative;
   top: 10px;
-  left: 65px;
+  left: 90px;
   color:#444;
 
   p { display: inline-block; text-align: left; vertical-align: top; min-height: 100px }
