@@ -5,6 +5,17 @@ This site is an education landing page that's meant to provide basic information
 
 You can see the live site at [delimitedfileformats.info](http://delimitedfileformats.info)
 
+
+G E T T I N G S T A R T E D
+===========================
+
+* Make sure you have Rails 3.1 installed and RVM
+* Open terminal
+* bundle install
+* rails s
+* hit http://localhost:3000 in your browser
+
+
 C O N T R I B U T I N G  to  D E L I M I T E D  F I L E  F O R M A T S
 ========================================================
 
